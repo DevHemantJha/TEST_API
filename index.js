@@ -1,17 +1,12 @@
-'use strict';
 const express = require('express');
-const config = require('./config');
-const routes = require('./routes/routes');
-const cp = require('cookie-parser');
-
 const app = express();
+const port = 8080;
 
+const routes = require('./routes/routes');
 
-app.use(cp());
 app.use(express.json());
+app.use(routes);
 
-app.use('/', routes);
-
-app.listen(config.port, () => {
-  console.log(`Server running at http://localhost:` + config.port);
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
 });
