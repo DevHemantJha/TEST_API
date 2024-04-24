@@ -25,7 +25,7 @@ paths:
       responses:
         "200":
           description: Successful operation
-  /test_Api/test1:
+  /test1:
     summary: Testing route
     get:
       summary: Testing route
@@ -33,7 +33,7 @@ paths:
       responses:
         "200":
           description: Successful operation
-  /test_Api/test2:
+  /test2:
     summary: Testing route
     get:
       summary: Testing route
