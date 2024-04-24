@@ -17,7 +17,7 @@ tags:
   - name: books
     description: In-memory book list cache API
 paths:
- /test:
+  /test:
     summary: Testing route
     get:
       summary: Testing route
