@@ -5,6 +5,4 @@ const { test } = require('../controllers/dropdownController');
 //Testing route
 router.get('/test', test);
 
-
-
 module.exports = router;
