@@ -1,13 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const { test, test2 } = require('../controllers/dropdownController');
-const OpenApiValidator = require('express-openapi-validator');
 
-router.use('/test_Api', OpenApiValidator.middleware({
-    apiSpec: './openapi.yaml',
-    validateRequests: true, // (default)
-    validateResponses: true, // false by default
-}),);
+
+router.get('/test_Api', function(req, res) {
+    res.send("you've reached the API endpoint");
+  });
 
 
 //Testing route
