@@ -5,7 +5,5 @@ endpoints:
     port: 8080
     type: REST
     networkVisibility: Public
-    context:
-      - /test
-      - /test2
+    context: /test
     schemaFilePath: openapi.yaml
