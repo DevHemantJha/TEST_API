@@ -1,11 +1,19 @@
 const express = require('express');
 const router = express.Router();
 const { test, test2 } = require('../controllers/dropdownController');
+const OpenApiValidator = require('express-openapi-validator');
+
+router.use('/test_Api', OpenApiValidator.middleware({
+    apiSpec: './openapi.yaml',
+    validateRequests: true, // (default)
+    validateResponses: true, // false by default
+}),);
+
 
 //Testing route
 /**
  * @openapi
- * /test:
+ * /test_Api/test1:
  *   get:
  *     summary: Testing route
  *     operationId: TestingRoute
@@ -13,11 +21,11 @@ const { test, test2 } = require('../controllers/dropdownController');
  *       "200":
  *         description: Successful operation
  */
-router.get('/test', test);
+router.get('/test_Api/test1', test);
 
 /**
  * @openapi
- * /test2:
+ * /test_Api/test2:
  *   get:
  *     summary: Testing route
  *     operationId: TestingRoute
@@ -25,7 +33,6 @@ router.get('/test', test);
  *       "200":
  *         description: Successful operation
  */
-router.get('/test2', test2);
+router.get('/test_Api/test1', test2);
 
 module.exports = router;
-
