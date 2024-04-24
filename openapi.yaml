@@ -17,14 +17,6 @@ tags:
   - name: books
     description: In-memory book list cache API
 paths:
- /:
-    summary: Testing route
-    get:
-      summary: Testing route
-      operationId: TestingRoute
-      responses:
-        "200":
-          description: Successful operation
   /test1:
     summary: Testing route
     get:
@@ -33,14 +25,18 @@ paths:
       responses:
         "200":
           description: Successful operation
+        "404":
+          description: failed operation
   /test2:
-    summary: Testing route
+   summary: Testing route
     get:
       summary: Testing route
       operationId: TestingRoute
       responses:
         "200":
           description: Successful operation
+        "404":
+          description: failed operation
 components:
   schemas:
     Key:
