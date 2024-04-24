@@ -27,7 +27,16 @@ paths:
           description: Successful operation
         "404":
           description: failed operation
- 
+  /test2:
+    summary: Testing route3
+    get:
+      summary: Testing route3
+      operationId: TestingRoute3
+      responses:
+        "200":
+          description: Successful operation
+        "404":
+          description: failed operation
 components:
   schemas:
     Key:
